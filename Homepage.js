@@ -1,3 +1,4 @@
+// Existing JavaScript code
 const btn_menu = document.querySelector(".btn-menu");
 const side_bar = document.querySelector(".sidebar");
 const logoText = document.querySelector(".logo-text");
@@ -15,7 +16,6 @@ function changebtn() {
         logoText.style.display = "inline";
     } else {
         btn_menu.classList.replace("bx-menu-alt-right", "bx-menu");
-
     }
 }
 
@@ -71,3 +71,119 @@ updateContent();
 
 // Update the content every second (for testing purposes)
 setInterval(updateContent, 1000);
+
+// Toggle visibility of content box section details
+function toggleSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    const form = document.getElementById(`${sectionId}-form`);
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
+// Add task to the list
+function addTask() {
+    const taskInput = document.getElementById('task-input');
+    const tasksList = document.querySelector('#tasks-section ul');
+    const newTask = document.createElement('li');
+    newTask.textContent = taskInput.value;
+    tasksList.appendChild(newTask);
+    taskInput.value = '';
+}
+
+// Modal functions
+function openModal(task) {
+    const modal = document.getElementById('details-modal');
+    const taskDetails = document.getElementById('task-details');
+    taskDetails.textContent = `Task Details: ${task}`;
+    modal.style.display = 'flex';
+}
+
+function closeModal() {
+    const modal = document.getElementById('details-modal');
+    modal.style.display = 'none';
+}
+
+// Sample usage of openModal function
+document.querySelector('#tasks-section ul').addEventListener('click', function (event) {
+    if (event.target.tagName === 'LI') {
+        openModal(event.target.textContent);
+    }
+});
+
+// New JavaScript functions for Design section
+function toggleDesignSection() {
+    const section = document.getElementById('design-section');
+    const form = document.getElementById('design-form');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
+function addDesignTask() {
+    const designInput = document.getElementById('design-input');
+    const designTasksList = document.querySelector('#design-section ul');
+    const newDesignTask = document.createElement('li');
+    newDesignTask.textContent = designInput.value;
+    designTasksList.appendChild(newDesignTask);
+    designInput.value = '';
+}
+
+function openDesignModal(designTask) {
+    const modal = document.getElementById('details-modal');
+    const designDetails = document.getElementById('task-details');
+    designDetails.textContent = `Design Task Details: ${designTask}`;
+    modal.style.display = 'flex';
+}
+
+// New JavaScript functions for Testing section
+function toggleTestingSection() {
+    const section = document.getElementById('testing-section');
+    const form = document.getElementById('testing-form');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
+function addTestingTask() {
+    const testingInput = document.getElementById('testing-input');
+    const testingTasksList = document.querySelector('#testing-section ul');
+    const newTestingTask = document.createElement('li');
+    newTestingTask.textContent = testingInput.value;
+    testingTasksList.appendChild(newTestingTask);
+    testingInput.value = '';
+}
+
+function openTestingModal(testingTask) {
+    const modal = document.getElementById('details-modal');
+    const testingDetails = document.getElementById('task-details');
+    testingDetails.textContent = `Testing Task Details: ${testingTask}`;
+    modal.style.display = 'flex';
+}
+
+// New JavaScript functions for Documentation section
+function toggleDocumentationSection() {
+    const section = document.getElementById('documentation-section');
+    const form = document.getElementById('documentation-form');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
+function addDocumentationTask() {
+    const documentationInput = document.getElementById('documentation-input');
+    const documentationTasksList = document.querySelector('#documentation-section ul');
+    const newDocumentationTask = document.createElement('li');
+    newDocumentationTask.textContent = documentationInput.value;
+    documentationTasksList.appendChild(newDocumentationTask);
+    documentationInput.value = '';
+}
+
+function openDocumentationModal(documentationTask) {
+    const modal = document.getElementById('details-modal');
+    const documentationDetails = document.getElementById('task-details');
+    documentationDetails.textContent = `Documentation Task Details: ${documentationTask}`;
+    modal.style.display = 'flex';
+}
+
+// Call the functions initially
+updateContent();
+
+// Update the content every second (for testing purposes)
+setInterval(updateContent, 1000);
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+}

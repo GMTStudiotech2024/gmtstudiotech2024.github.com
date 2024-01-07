@@ -1,9 +1,11 @@
+/* Reset styles for better consistency across browsers */
 body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Global styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
@@ -220,6 +222,314 @@ body {
     font-size: 2em;
 }
 
+/* Additional styles for the new sections */
+#design-section,
+#testing-section,
+#documentation-section {
+    margin:0px;
+}
+
+/* Updated styles for the expanded sidebar */
+.sidebar.expand ~ .content-container {
+    margin-left: 250px;
+}
+
+.sidebar.expand ~ .content-container .content-box {
+    transform: translateX(0px);
+}
+
+/* Hide words behind the expanded sidebar */
+.sidebar.expand ~ .content-container .hidden-words {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* On smaller screens, make the sidebar take full width */
+        position: relative;
+        overflow-x: auto;
+    }
+
+    .sidebar.expand ~ .content-container {
+        margin-left: 0;
+    }
+
+    .sidebar.expand ~ .content-container .content-box {
+        transform: translateX(0);
+    }
+
+    .sidebar.expand ~ .content-container .hidden-words {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px; /* Adjust this value based on your sidebar width */
+    transition: margin-left 0.2s ease; /* Transition for margin change */
+}
+
+.content-box {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+/* Updated styles for expanded sidebar */
+.sidebar.expand ~ .content-container {
+    margin-left: 250px;
+}
+
+.sidebar.expand ~ .content-container .content-box {
+    transform: translateX(0px);
+}
+
+.sidebar.expand ~ .content-container .hidden-words {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* On smaller screens, make the sidebar take full width */
+        position: relative;
+        overflow-x: auto;
+    }
+
+    .sidebar.expand ~ .content-container {
+        margin-left: 0;
+    }
+
+    .sidebar.expand ~ .content-container .content-box {
+        transform: translateX(0);
+    }
+
+    .sidebar.expand ~ .content-container .hidden-words {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* New styles for Design section */
+#design-section,
+#testing-section,
+#documentation-section {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+/* Additional styles for the dynamic adjustment of content */
+.sidebar.expand ~ .content-container #design-section,
+.sidebar.expand ~ .content-container #testing-section,
+.sidebar.expand ~ .content-container #documentation-section {
+    transform: translateX(0px);
+}
+
+/* Hide words behind the expanded sidebar for new sections */
+.sidebar.expand ~ .content-container #design-section .hidden-words,
+.sidebar.expand ~ .content-container #testing-section .hidden-words,
+.sidebar.expand ~ .content-container #documentation-section .hidden-words {
+    opacity: 0;
+    visibility: hidden;
+}
+button {
+    background-color: #007bb5; /* Button background color in light mode */
+    color: #fff; /* Button text color in light mode */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005686; /* Hover background color in light mode */
+}
+
+.dark-mode button {
+    background-color: #333333; /* Button background color in dark mode */
+    color: #fff; /* Button text color in dark mode */
+}
+
+.dark-mode button:hover {
+    background-color: #1a1a1a; /* Hover background color in dark mode */
+}
+
+.menu li:hover a,
+.auth-menu li:hover a {
+    color: #007bb5; /* Hover text color */
+}
+
+.content-box:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+.menu i,
+.auth-menu i {
+    font-size: 1.8em; /* Adjust icon size */
+    margin-right: 10px;
+    color: #007bb5; /* Icon color */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5; /* Updated background color */
+    color: #333; /* Updated text color */
+}
+
+.sidebar {
+    background-color: #fff;
+    color: #333;
+}
+
+.menu li,
+.auth-menu li {
+    background-color: #f8f9fa; /* Background color for menu items */
+}
+
+.menu li:hover,
+.auth-menu li:hover {
+    background-color: #e2e6ea; /* Hover background color */
+}
+
+.content-container,
+.content-box,
+#design-section,
+#testing-section,
+#documentation-section {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+/* Dark mode styles */
+.dark-mode {
+    background-color: #2d2d2d; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+.dark-mode .sidebar {
+    background-color: #333333; /* Dark sidebar background color */
+    color: #ffffff; /* Light text color for sidebar */
+}
+
+.dark-mode .menu li,
+.dark-mode .auth-menu li {
+    background-color: #2d2d2d; /* Dark menu item background color */
+}
+
+.dark-mode .menu li:hover,
+.dark-mode .auth-menu li:hover {
+    background-color: #444444; /* Dark menu item hover background color */
+}
+
+.dark-mode .content-container,
+.dark-mode .content-box,
+.dark-mode #design-section,
+.dark-mode #testing-section,
+.dark-mode #documentation-section {
+    background-color: #333333; /* Dark content background color */
+    color: #ffffff; /* Light text color for content */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Light box shadow for depth */
+}
+
+.dark-mode .content-box:hover {
+    transform: scale(1.05); /* Scale up on hover in dark mode */
+}
+
+.dark-mode button {
+    background-color: #007bb5; /* Dark button background color */
+    color: #ffffff; /* Light text color for buttons */
+}
+
+.dark-mode button:hover {
+    background-color: #005686; /* Dark button hover background color */
+}
+
+.dark-mode .bx-menu-alt-right.btn-menu,
+.dark-mode .btn-menu {
+    color: #ffffff; /* Light color for menu icon in dark mode */
+}
+
+.dark-mode .bx-menu-alt-right.btn-menu:hover {
+    color: #007bb5; /* Light color for menu icon on hover in dark mode */
+}
+
+/* Additional dark mode styles can be added as needed */
+.dark-mode .menu li a,
+.dark-mode .auth-menu li a {
+    color: #ffffff; /* Light text color for menu items inside the sidebar */
+}
+
+.dark-mode .menu li:hover a,
+.dark-mode .auth-menu li:hover a {
+    color: #007bb5; /* Light text color on hover for menu items inside the sidebar */
+}
+.btn-mode {
+    background-color: #007bb5; /* Button background color in light mode */
+    color: #fff; /* Button text color in light mode */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-mode:hover {
+    background-color: #005686; /* Hover background color in light mode */
+}
+
+.dark-mode .btn-mode {
+    background-color: #333333; /* Button background color in dark mode */
+    color: #fff; /* Button text color in dark mode */
+}
+
+.dark-mode .btn-mode:hover {
+    background-color: #1a1a1a; /* Hover background color in dark mode */
+}
+.dlb {
+    background-color: #007bb5;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.dlb:hover {
+    background-color: #005686;
+}
+
+.dlb .icon {
+    margin-right: 8px;
+}
+
+.dark-mode .dlb {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.dark-mode .dlb:hover {
+    background-color: #004065;
+}
+
+/* Optional: Add box shadow for a subtle lift effect */
+.dlb {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Reset styles for better consistency across browsers */
 body, h1, h2, h3, p, ul {
     margin: 0;
@@ -230,91 +540,88 @@ body, h1, h2, h3, p, ul {
 /* Global styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #fafafa, #f0f0f0);
-    color: #333333;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background-color: #f0f2f5; /* Updated background color */
+    color: #333; /* Updated text color */
 }
 
-header {
-    background: linear-gradient(to right, #ffffff, #f0f0f0);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.sidebar {
+    height: 100vh;
+    width: 100px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: width 0.2s ease; /* Faster transition */
 }
 
-header h1 {
-    font-size: 2em;
-    font-weight: bold;
-    color: #333333;
-    margin: 0;
+.sidebar.expand {
+    width: 250px;
 }
 
-header .user-menu {
-    display: flex;
-    align-items: center;
+.logo {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #e0e0e0;
 }
 
-header .user-menu a {
-    margin-left: 20px;
+.logo a {
+    color: #0095f6;
     text-decoration: none;
-    color: #333333;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
+    font-size: 1.8em;
+    font-weight: bold;
+    display: block;
+    transition: color 0.2s ease; /* Faster transition */
 }
 
-header .user-menu a:hover {
+.menu ul, .auth-menu ul {
+    list-style: none;
+}
+
+.menu li, .auth-menu li {
+    position: relative;
+    padding: 15px;
+    font-size: 1.2em;
+    transition: background-color 0.2s, color 0.2s; /* Faster transitions */
+    cursor: pointer;
+}
+
+.menu li a, .auth-menu li a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 1.1em;
+    align-items: center;
+    display: flex;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.menu li:hover, .auth-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.menu li:hover a, .auth-menu li:hover a {
     color: #007bb5;
 }
 
+.menu i, .auth-menu i {
+    font-size: 1.8em;
+    margin-right: 10px;
+    color: #007bb5; /* Icon color */
+}
+
 .content {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    margin-left: 250px;
+    padding: 30px;
+    transition: margin-left 0.2s ease; /* Faster transition */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Add your keyframes, media queries, and additional styles below */
 
-.content-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-}
-
-/* Style for each group box */
-.content-box {
-    width: 30%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-}
-
-/* Style for the time box */
-.Time {
-    font-size: 24px;
-    text-align: center;
-}
-
-/* Style for the progress bar container */
-.progress-container {
-    margin-top: 20px;
-}
-
-/* Style for the progress bars */
-.progress-bar {
-    height: 20px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.progress-fill {
-    height: 100%;
-    background-color: #4caf50;
-    border-radius: 5px;
-}
+/* Dark mode styles and other enhancements can be added as needed */
