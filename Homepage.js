@@ -28,162 +28,146 @@ document.addEventListener("click", function (event) {
     }
 });
 
-function updateContent() {
-    updateTime();
-    updateProgress();
-}
 
-function updateTime() {
-    const timeElement = document.querySelector('.Time');
-    const taiwanTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Taipei' });
-    timeElement.textContent = `Current Time in Taiwan: ${taiwanTime}`;
-}
-
-function updateProgress() {
-    const currentDate = new Date();
-    const dayOfYear = getDayOfYear(currentDate);
-
-    // Set progress for HTML, CSS, and JS
-    setProgress('html-progress', dayOfYear);
-    setProgress('css-progress', dayOfYear);
-    setProgress('js-progress', dayOfYear);
-}
-
-// Function to get the day of the year
-function getDayOfYear(date) {
-    const start = new Date(date.getFullYear(), 0, 0);
-    const diff = date - start;
-    const oneDay = 1000 * 60 * 60 * 24;
-    return Math.floor(diff / oneDay);
-}
-
-// Function to set the progress
-function setProgress(progressId, dayOfYear) {
-    const progressElement = document.getElementById(progressId);
-    const progressValue = (dayOfYear / 365) * 100;
-
-    // Set the progress width
-    progressElement.style.width = `${progressValue}%`;
-}
-
-// Call the functions initially
-updateContent();
-
-// Update the content every second (for testing purposes)
-setInterval(updateContent, 1000);
-
-// Toggle visibility of content box section details
-function toggleSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    const form = document.getElementById(`${sectionId}-form`);
-    form.style.display = form.style.display === 'none' ? 'block' : 'none';
-}
-
-// Add task to the list
-function addTask() {
-    const taskInput = document.getElementById('task-input');
-    const tasksList = document.querySelector('#tasks-section ul');
-    const newTask = document.createElement('li');
-    newTask.textContent = taskInput.value;
-    tasksList.appendChild(newTask);
-    taskInput.value = '';
-}
-
-// Modal functions
-function openModal(task) {
-    const modal = document.getElementById('details-modal');
-    const taskDetails = document.getElementById('task-details');
-    taskDetails.textContent = `Task Details: ${task}`;
-    modal.style.display = 'flex';
-}
-
-function closeModal() {
-    const modal = document.getElementById('details-modal');
-    modal.style.display = 'none';
-}
-
-// Sample usage of openModal function
-document.querySelector('#tasks-section ul').addEventListener('click', function (event) {
-    if (event.target.tagName === 'LI') {
-        openModal(event.target.textContent);
-    }
-});
-
-// New JavaScript functions for Design section
-function toggleDesignSection() {
-    const section = document.getElementById('design-section');
-    const form = document.getElementById('design-form');
-    form.style.display = form.style.display === 'none' ? 'block' : 'none';
-}
-
-function addDesignTask() {
-    const designInput = document.getElementById('design-input');
-    const designTasksList = document.querySelector('#design-section ul');
-    const newDesignTask = document.createElement('li');
-    newDesignTask.textContent = designInput.value;
-    designTasksList.appendChild(newDesignTask);
-    designInput.value = '';
-}
-
-function openDesignModal(designTask) {
-    const modal = document.getElementById('details-modal');
-    const designDetails = document.getElementById('task-details');
-    designDetails.textContent = `Design Task Details: ${designTask}`;
-    modal.style.display = 'flex';
-}
-
-// New JavaScript functions for Testing section
-function toggleTestingSection() {
-    const section = document.getElementById('testing-section');
-    const form = document.getElementById('testing-form');
-    form.style.display = form.style.display === 'none' ? 'block' : 'none';
-}
-
-function addTestingTask() {
-    const testingInput = document.getElementById('testing-input');
-    const testingTasksList = document.querySelector('#testing-section ul');
-    const newTestingTask = document.createElement('li');
-    newTestingTask.textContent = testingInput.value;
-    testingTasksList.appendChild(newTestingTask);
-    testingInput.value = '';
-}
-
-function openTestingModal(testingTask) {
-    const modal = document.getElementById('details-modal');
-    const testingDetails = document.getElementById('task-details');
-    testingDetails.textContent = `Testing Task Details: ${testingTask}`;
-    modal.style.display = 'flex';
-}
-
-// New JavaScript functions for Documentation section
-function toggleDocumentationSection() {
-    const section = document.getElementById('documentation-section');
-    const form = document.getElementById('documentation-form');
-    form.style.display = form.style.display === 'none' ? 'block' : 'none';
-}
-
-function addDocumentationTask() {
-    const documentationInput = document.getElementById('documentation-input');
-    const documentationTasksList = document.querySelector('#documentation-section ul');
-    const newDocumentationTask = document.createElement('li');
-    newDocumentationTask.textContent = documentationInput.value;
-    documentationTasksList.appendChild(newDocumentationTask);
-    documentationInput.value = '';
-}
-
-function openDocumentationModal(documentationTask) {
-    const modal = document.getElementById('details-modal');
-    const documentationDetails = document.getElementById('task-details');
-    documentationDetails.textContent = `Documentation Task Details: ${documentationTask}`;
-    modal.style.display = 'flex';
-}
-
-// Call the functions initially
-updateContent();
-
-// Update the content every second (for testing purposes)
-setInterval(updateContent, 1000);
 function toggleDarkMode() {
     const body = document.body;
     body.classList.toggle('dark-mode');
 }
+const contentContainer = document.querySelector('.content-container');
+
+// Enhanced content data with additional details (modify as needed)
+const enhancedContent = [
+    {
+        id: 'design-section',
+        title: 'Design Section',
+        description: 'Explore the creative design process to build visually appealing and user-friendly interfaces.',
+        details: 'This section covers principles of graphic design, user experience (UX) design, and prototyping. It also delves into color theory, typography, and design software.',
+        link: '#design-link',
+        imageUrl: 'design.jpg' // Add image URL for the section
+    },
+    {
+        id: 'testing-section',
+        title: 'Testing Section',
+        description: 'Learn about software testing methodologies and best practices to ensure high-quality code.',
+        details: 'Topics include unit testing, integration testing, regression testing, and test-driven development (TDD). Understand the importance of test coverage and continuous integration (CI) in software testing.',
+        link: '#testing-link',
+        imageUrl: 'testing.jpg' // Add image URL for the section
+    },
+    {
+        id: 'documentation-section',
+        title: 'Documentation Section',
+        description: 'Discover the importance of thorough documentation in the software development lifecycle.',
+        details: 'Explore documentation tools, techniques, and tips for creating effective project documentation. This section emphasizes the significance of clear, concise, and up-to-date documentation for project success.',
+        link: '#documentation-link',
+        imageUrl: 'documentation.jpg' // Add image URL for the section
+    },
+    // Add more sections with similar structures
+];
+
+// Function to create an enhanced content box element with dynamic content
+function createEnhancedContentBox(content) {
+    const { id, title, description, details, link, imageUrl } = content;
+
+    const contentBox = document.createElement('div');
+    contentBox.classList.add('content-box');
+
+    const imageElem = document.createElement('img');
+    imageElem.src = imageUrl;
+    imageElem.alt = title;
+    contentBox.appendChild(imageElem);
+
+    const contentDetails = document.createElement('div');
+    contentDetails.classList.add('content-details');
+
+    const titleElem = document.createElement('h2');
+    titleElem.textContent = title;
+
+    const descriptionElem = document.createElement('p');
+    descriptionElem.textContent = description;
+
+    const detailsElem = document.createElement('p');
+    detailsElem.textContent = details;
+
+    const linkElem = document.createElement('a');
+    linkElem.href = link;
+    linkElem.textContent = 'Learn More';
+
+    contentDetails.appendChild(titleElem);
+    contentDetails.appendChild(descriptionElem);
+    contentDetails.appendChild(detailsElem);
+    contentDetails.appendChild(linkElem);
+
+    contentBox.appendChild(contentDetails);
+
+    return contentBox;
+}
+
+// Function to append enhanced content boxes to the container
+function appendEnhancedContentBoxes(contents) {
+    contents.forEach(content => {
+        const newContentBox = createEnhancedContentBox(content);
+        contentContainer.appendChild(newContentBox);
+    });
+}
+
+// Append the enhanced content to the content container
+appendEnhancedContentBoxes(enhancedContent);
+const calendarGrid = document.getElementById('calendarGrid');
+const currentMonthYear = document.getElementById('currentMonthYear');
+const prevMonthBtn = document.getElementById('prevMonth');
+const nextMonthBtn = document.getElementById('nextMonth');
+
+let currentDate = new Date();
+
+function renderCalendar() {
+  const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+  const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+  const daysInMonth = lastDayOfMonth.getDate();
+  const firstDayOfWeek = firstDayOfMonth.getDay();
+
+  currentMonthYear.textContent = currentDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+  let day = 1;
+  calendarGrid.innerHTML = '';
+
+  for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 7; j++) {
+      const calendarDay = document.createElement('div');
+      calendarDay.classList.add('calendar-day');
+
+      if ((i === 0 && j < firstDayOfWeek) || day > daysInMonth) {
+        calendarDay.textContent = '';
+      } else {
+        calendarDay.textContent = day;
+        if (day === currentDate.getDate() && currentDate.getMonth() === new Date().getMonth()) {
+          calendarDay.classList.add('current-month-day');
+        }
+
+        calendarDay.addEventListener('click', () => {
+          handleDayClick(day);
+        });
+
+        day++;
+      }
+
+      calendarGrid.appendChild(calendarDay);
+    }
+  }
+}
+
+function handleDayClick(day) {
+  console.log(`Selected day: ${day}`);
+  // Add your logic for handling the selected day here
+}
+
+prevMonthBtn.addEventListener('click', () => {
+  currentDate.setMonth(currentDate.getMonth() - 1);
+  renderCalendar();
+});
+
+nextMonthBtn.addEventListener('click', () => {
+  currentDate.setMonth(currentDate.getMonth() + 1);
+  renderCalendar();
+});
+
+renderCalendar();

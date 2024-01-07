@@ -36,75 +36,16 @@
             </div>
         </div>
         <!-- End Sidebar -->
-
         <!-- Content -->
         <div class="content-container">
-            <!-- Section 1: Tasks -->
-            <div class="content-box" id="tasks-section">
-                <h2>Tasks</h2>
-                <ul>
-                    <li>Task 1</li>
-                    <li>Task 2</li>
-                    <li>Task 3</li>
-                </ul>
-                <button class="manage-btn" onclick="toggleSection('tasks-section')">Show/Hide Task Form</button>
-                <div class="section-details">
-                    <!-- Task management form (hidden by default) -->
-                    <form id="task-form" style="display: none;">
-                        <label for="task-input">New Task:</label>
-                        <input type="text" id="task-input" placeholder="Enter task...">
-                        <button type="button" onclick="addTask()">Add Task</button>
-                    </form>
+            <div class="calendar">
+                <div class="calendar-header">
+                  <button id="prevMonth">&lt;</button>
+                  <h1 id="currentMonthYear"></h1>
+                  <button id="nextMonth">&gt;</button>
                 </div>
-            </div>
-
-            <!-- Section 2: Design -->
-            <div class="content-box" id="design-section">
-                <h2>Design</h2>
-                <p>This is a placeholder for design-related content. You can add your design elements here.</p>
-                <button class="manage-btn" onclick="toggleSection('design-section')">Show/Hide Design Form</button>
-                <div class="section-details">
-                    <!-- Design management form (hidden by default) -->
-                    <form id="design-form" style="display: none;">
-                        <!-- Add design form elements here -->
-                    </form>
-                </div>
-            </div>
-
-            <!-- Section 3: Testing -->
-            <div class="content-box" id="testing-section">
-                <h2>Testing</h2>
-                <p>This is a placeholder for testing-related content. You can add your testing elements here.</p>
-                <button class="manage-btn" onclick="toggleSection('testing-section')">Show/Hide Testing Form</button>
-                <div class="section-details">
-                    <!-- Testing management form (hidden by default) -->
-                    <form id="testing-form" style="display: none;">
-                        <!-- Add testing form elements here -->
-                    </form>
-                </div>
-            </div>
-
-            <!-- Section 4: Documentation -->
-            <div class="content-box" id="documentation-section">
-                <h2>Documentation</h2>
-                <p>This is a placeholder for documentation-related content. You can add your documentation elements here.</p>
-                <button class="manage-btn" onclick="toggleSection('documentation-section')">Show/Hide Documentation Form</button>
-                <div class="section-details">
-                    <!-- Documentation management form (hidden by default) -->
-                    <form id="documentation-form" style="display: none;">
-                        <!-- Add documentation form elements here -->
-                    </form>
-                </div>
-            </div>
-
-            <!-- Modal for detailed information -->
-            <div class="modal" id="details-modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <h2>Task Details</h2>
-                    <p id="task-details">Task details will appear here...</p>
-                </div>
-            </div>
+                <div class="calendar-grid" id="calendarGrid"></div>
+              </div>
             <button onclick="toggleDarkMode()" class="dlb">Toggle Dark Mode</button>
         </div>        
         

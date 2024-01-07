@@ -625,3 +625,101 @@ body {
 /* Add your keyframes, media queries, and additional styles below */
 
 /* Dark mode styles and other enhancements can be added as needed */
+.calendar {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px 20px;
+  }
+  
+  .calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .current-month-day {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .selected-day {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .today {
+    border: 2px solid #007bff;
+    box-sizing: border-box;
+  }
+  .dark-mode .calendar {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+  }
+  
+  .dark-mode .calendar-header button {
+    color: #fff; /* Button color in dark mode */
+  }
+  
+  .dark-mode .calendar-grid {
+    background-color: #444; /* Darker grid background color */
+  }
+  
+  /* Style for days in dark mode */
+  .dark-mode .calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #333; /* Dark day background color */
+    color: #fff; /* Light text color for days */
+  }
+  
+  .dark-mode .current-month-day {
+    background-color: #007bff; /* Current month day color in dark mode */
+  }
+  
+  .dark-mode .selected-day {
+    background-color: #28a745; /* Selected day color in dark mode */
+  }
+  
+  .dark-mode .today {
+    border: 2px solid #007bff; /* Today's border color in dark mode */
+    box-sizing: border-box;
+    color: #007bff; /* Today's text color in dark mode */
+  }
