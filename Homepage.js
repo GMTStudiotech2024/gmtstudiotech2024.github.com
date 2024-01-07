@@ -171,3 +171,73 @@ nextMonthBtn.addEventListener('click', () => {
 });
 
 renderCalendar();
+// Function to set dark mode preference in local storage
+function setDarkModePreference(mode) {
+    localStorage.setItem('darkMode', mode);
+  }
+  
+  // Function to get dark mode preference from local storage
+  function getDarkModePreference() {
+    return localStorage.getItem('darkMode');
+  }
+  
+  // Function to set selected date in local storage
+  function setSelectedDate(date) {
+    localStorage.setItem('selectedDate', date);
+  }
+  
+  // Function to get selected date from local storage
+  function getSelectedDate() {
+    return localStorage.getItem('selectedDate');
+  }
+  
+  // Function to set sidebar state in local storage
+  function setSidebarState(expanded) {
+    localStorage.setItem('sidebarExpanded', expanded);
+  }
+  
+  // Function to get sidebar state from local storage
+  function getSidebarState() {
+    return localStorage.getItem('sidebarExpanded') === 'true';
+  }
+  
+  // Check and set preferences on load
+  window.addEventListener('load', function () {
+    const savedDarkMode = getDarkModePreference();
+    if (savedDarkMode) {
+      document.body.classList.toggle('dark-mode', savedDarkMode === 'dark');
+    }
+  
+    const savedDate = getSelectedDate();
+    if (savedDate) {
+      // Set the saved date to your calendar or UI
+      // For instance, assuming you have a function updateCalendar(date) to update the calendar UI:
+      updateCalendar(savedDate);
+    }
+  
+    const savedSidebarState = getSidebarState();
+    if (savedSidebarState) {
+      document.querySelector('.sidebar').classList.toggle('expand', savedSidebarState);
+    }
+  });
+  
+  // Event listener for toggling dark mode
+  function toggleDarkMode() {
+    const body = document.body;
+    const isDarkMode = body.classList.toggle('dark-mode');
+    setDarkModePreference(isDarkMode ? 'dark' : 'light');
+  }
+  
+  // Event listener for selecting a date in the calendar
+  function selectDate(date) {
+    setSelectedDate(date);
+    updateCalendar(date);
+  }
+  
+  // Event listener for toggling sidebar
+  function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const isExpanded = sidebar.classList.toggle('expand');
+    setSidebarState(isExpanded);
+  }
+  
