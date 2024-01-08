@@ -1,17 +1,14 @@
-/* Reset styles for better consistency across browsers */
 body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Global styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     color: #333333;
 }
-
+/*sidebar*/
 .sidebar {
     height: 100vh;
     width: 100px;
@@ -23,12 +20,28 @@ body {
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
-    transition: width 0.2s ease; /* Faster transition */
+    transition: width 0.2s ease;
+}
+.logo {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+.logo a {
+    color: #0095f6;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bold;
+    display: block;
+    transition: color 0.2s ease; /* Faster transition */
+}
+.logo a:hover {
+    color: #007bb5;
 }
 
 .sidebar.expand {
     width: 250px;
-    transition: width 0.2s ease; /* Faster transition */
+    transition: width 0.2s ease; 
 }
 
 .sidebar.expand .nav-header .btn-menu {
@@ -38,25 +51,6 @@ body {
 .sidebar.expand .nav-links input {
     width: 100%;
     padding: 0 20px 0 40px;
-}
-
-.logo {
-    text-align: center;
-    padding: 15px 0;
-    border-bottom: 2px solid #e0e0e0;
-}
-
-.logo a {
-    color: #0095f6;
-    text-decoration: none;
-    font-size: 1.8em;
-    font-weight: bold;
-    display: block;
-    transition: color 0.2s ease; /* Faster transition */
-}
-
-.logo a:hover {
-    color: #007bb5;
 }
 
 .menu ul {
@@ -145,7 +139,7 @@ body {
 .auth-menu li:hover a {
     color: #007bb5;
 }
-
+/*end of sidebar*/
 .content {
     margin-left: 320px;
     padding: 30px;
@@ -627,9 +621,9 @@ body {
 /* Dark mode styles and other enhancements can be added as needed */
 .calendar {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
   }
   
@@ -642,7 +636,7 @@ body {
   }
   
   button {
-    background: none;
+    background:#444;
     border: none;
     cursor: pointer;
     font-size: 18px;
@@ -664,9 +658,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
+    height: 50px;
+    width:50px;
+    border-radius: 6px;
     cursor: pointer;
   }
   
@@ -687,8 +681,19 @@ body {
   .dark-mode .calendar {
     background-color: #333; /* Dark background color */
     color: #fff; /* Light text color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
   }
-  
+  .calendar .dark-mode  {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+  }
   .dark-mode .calendar-header button {
     color: #fff; /* Button color in dark mode */
   }
@@ -704,9 +709,9 @@ body {
     justify-content: center;
     height: 40px;
     width: 40px;
-    border-radius: 50%;
+    border-radius: 6px;
     cursor: pointer;
-    background-color: #333; /* Dark day background color */
+    background-color: #444; /* Dark day background color */
     color: #fff; /* Light text color for days */
   }
   
@@ -723,3 +728,171 @@ body {
     box-sizing: border-box;
     color: #007bff; /* Today's text color in dark mode */
   }
+
+
+
+  .calendar .dark-mode {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .calendar-header .dark{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  button {
+    background:#444;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px 20px;
+  }
+  
+  .calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width:50px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .current-month-day {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .selected-day {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .today {
+    border: 2px solid #007bff;
+    box-sizing: border-box;
+  }
+  .event-form {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.content-box {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    position: relative;
+    height: 200px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
+}
+
+/* Dark mode styles for content box */
+.dark-mode .content-box {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light box shadow for depth */
+}
+
+.sidebar.expand ~ .content-container {
+    margin-left: 250px; /* Expanded sidebar adjustment */
+}
+
+.sidebar.expand ~ .content-container .content-box {
+    transform: translateX(0px); /* Expanded sidebar translation */
+}
+
+.sidebar.expand ~ .content-container .hidden-words {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Dark mode styles for expanded sidebar */
+.dark-mode .sidebar {
+    background-color: #333333; /* Dark sidebar background color */
+    color: #ffffff; /* Light text color for sidebar */
+}
+
+.dark-mode .menu li,
+.dark-mode .auth-menu li {
+    background-color: #2d2d2d; /* Dark menu item background color */
+}
+
+.dark-mode .menu li:hover,
+.dark-mode .auth-menu li:hover {
+    background-color: #444444; /* Dark menu item hover background color */
+}
+
+.dark-mode .content-container,
+.dark-mode .content-box {
+    background-color: #333333; /* Dark content background color */
+    color: #ffffff; /* Light text color for content */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Light box shadow for depth */
+}
+
+/* Additional dark mode styles can be added as needed */
