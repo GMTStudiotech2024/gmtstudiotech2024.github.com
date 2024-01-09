@@ -404,6 +404,7 @@ body {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+
 }
 /* Dark mode styles */
 .dark-mode {
@@ -614,231 +615,10 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
 }
 
-/* Add your keyframes, media queries, and additional styles below */
 
-/* Dark mode styles and other enhancements can be added as needed */
-.calendar {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .calendar-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  button {
-    background:#444;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  h1 {
-    font-size: 20px;
-    margin: 0;
-  }
-  
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    padding: 10px 20px;
-  }
-  
-  .calendar-day {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width:50px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  .current-month-day {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .selected-day {
-    background-color: #28a745;
-    color: #fff;
-  }
-  
-  .today {
-    border: 2px solid #007bff;
-    box-sizing: border-box;
-  }
-  .dark-mode .calendar {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* Light text color */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-  }
-  .calendar .dark-mode  {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* Light text color */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-  }
-  .dark-mode .calendar-header button {
-    color: #fff; /* Button color in dark mode */
-  }
-  
-  .dark-mode .calendar-grid {
-    background-color: #444; /* Darker grid background color */
-  }
-  
-  /* Style for days in dark mode */
-  .dark-mode .calendar-day {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #444; /* Dark day background color */
-    color: #fff; /* Light text color for days */
-  }
-  
-  .dark-mode .current-month-day {
-    background-color: #007bff; /* Current month day color in dark mode */
-  }
-  
-  .dark-mode .selected-day {
-    background-color: #28a745; /* Selected day color in dark mode */
-  }
-  
-  .dark-mode .today {
-    border: 2px solid #007bff; /* Today's border color in dark mode */
-    box-sizing: border-box;
-    color: #007bff; /* Today's text color in dark mode */
-  }
-
-
-
-  .calendar .dark-mode {
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .calendar-header .dark{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  button {
-    background:#444;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  h1 {
-    font-size: 20px;
-    margin: 0;
-  }
-  
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    padding: 10px 20px;
-  }
-  
-  .calendar-day {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width:50px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  .current-month-day {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .selected-day {
-    background-color: #28a745;
-    color: #fff;
-  }
-  
-  .today {
-    border: 2px solid #007bff;
-    box-sizing: border-box;
-  }
-  .event-form {
-    font-family: Arial, sans-serif;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.event-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-textarea {
-    width: calc(100% - 12px);
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="text"]::placeholder,
-textarea::placeholder {
-    color: #999;
-}
-
-input[type="text"]:focus,
-textarea:focus,
-input[type="date"]:focus {
-    outline: none;
-    border-color: #66afe9;
-    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
-}
 .content-box {
     width: calc(33.33% - 20px);
     margin: 10px;
@@ -850,6 +630,7 @@ input[type="date"]:focus {
     position: relative;
     height: 200px; /* Set a fixed height */
     overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
+    border:5px solid black;
 }
 
 /* Dark mode styles for content box */
@@ -896,3 +677,153 @@ input[type="date"]:focus {
 }
 
 /* Additional dark mode styles can be added as needed */
+.title-lead {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.title-lead h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.title-lead p {
+    font-size: 18px;
+    color: #888;
+}
+/* Your existing CSS styles */
+
+/* Dark mode styles */
+.dark-mode .content-container {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode #about_us {
+    background-color: #333333;
+}
+
+.dark-mode a {
+    color: #9cc2f4;
+}
+
+.dark-mode .card {
+    border: 1px solid #666666;
+    border-radius: 5px;
+}
+
+.dark-mode .example-code {
+    background-color: #000000;
+}
+
+/* Expanding sidebar */
+.sidebar {
+    /* Your existing sidebar styles */
+    transition: width 0.2s ease;
+}
+
+.sidebar.expand {
+    width: 250px;
+}
+
+.content-container {
+    /* Your existing content-container styles */
+    transition: margin-left 0.2s ease;
+}
+
+.sidebar.expand ~ .content-container {
+    margin-left: 250px;
+}
+
+.services {
+    list-style: none;
+    padding: 0;
+    padding-top:10px;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.service img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.service-details h2 {
+    margin: 5px 0;
+}
+
+.service-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+.Service-bt{
+    height:50px;
+    width:100px;
+}
+.pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card-1 {
+    border: 5px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    border-color:#0095f6;
+
+}
+
+.card-silver {
+    border-color: silver;
+
+}
+
+.card-gold {
+    border-color: gold;
+
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.content-container {
+    padding-top: 0px; /* or margin-top: 10px; */
+    border: 1.5px solid black; /* Add a border as you mentioned */
+}

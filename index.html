@@ -41,8 +41,136 @@
         <!-- End Sidebar -->
         <!-- Content -->
         <div class="content-container">
-
-        </div>        
+            <div class="title-lead">
+                <h1>365code</h1>
+                <p>Home</p>
+            </div>
+        </div>    
+        <div class="content-container" style="border-color:black" >
+            <div id="content-container">
+                <h1 href="#">Source code:</h1>
+                <lord-icon src="https://cdn.lordicon.com/xpgofwru.json" trigger="hover" colors="primary:#9cc2f4" style="width:40px;height:40px"></lord-icon>
+                <a class="">Here is the source code of this website or any other code I found interesting</a>
+                <button href="Source-code.html">More Source Code</button>
+                <div class="card">
+                    <p>example:</p>
+                    <div class="example-code">
+                        <pre>
+                            <code id="codeSnippet"> 
+                                // Sidebar functionality
+                                const btn_menu = document.querySelector(".btn-menu");
+                                const side_bar = document.querySelector(".sidebar");
+                                const logoText = document.querySelector(".logo-text");
+                                
+                                // Toggle sidebar expand/collapse
+                                btn_menu.addEventListener("click", function () {
+                                    side_bar.classList.toggle("expand");
+                                    changeBtnIcon();
+                                });
+                                
+                                // Change button icon based on sidebar state
+                                function changeBtnIcon() {
+                                    const isExpanded = side_bar.classList.contains("expand");
+                                
+                                    if (isExpanded) {
+                                        btn_menu.classList.replace("bx-menu", "bx-menu-alt-right");
+                                        logoText.style.display = "inline";
+                                    } else {
+                                        btn_menu.classList.replace("bx-menu-alt-right", "bx-menu");
+                                    }
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <h1>Services</h1>
+            <ul class="services">
+                <li>
+                    <div class="service">
+                        <img src="/images/icons/webdev.svg" alt="Web Development Icon" />
+                        <div class="service-details">
+                            <h2>Web Development</h2>
+                            <p>HTML5, CSS, Javascript, Python</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="service">
+                        <img src="/images/icons/design.svg" alt="Design & UI/UX Icon" />
+                        <div class="service-details">
+                            <h2>Design &amp; UI/UX</h2>
+                            <p>Figma</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/joseph-miller-8026794/" target="_blank">
+                        <div class="service">
+                            <img src="/images/icons/consulting.svg" alt="Consulting and Mentoring Icon" />
+                            <div class="service-details">
+                                <h2>Consulting and Mentoring</h2>
+                                <p>Github</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="service">
+                        <i class="fa fa-check"></i>
+                        <h2>Web Design & Development</h2>
+                    </div>
+                </li>
+                <li>
+                    <div class="service">
+                        <i class="fa fa-check"></i>
+                        <h2>SEO Optimization</h2>
+                    </div>
+                </li>
+            </ul>
+            <button href="Services.html" class="Service-bt">Services details </button>
+        </div>
+        <div class="content-container">
+            <h1>Get Premium Version</h1>
+            <p>Unlock advanced features with the premium version of our software.</p>
+            <a href="#contact" class="Premium-btn">Contact us for more information<i class="fa fa-arrow-right"></i></a>
+            <div class="pricing-cards">
+                <div class="card-1">
+                    <h2>Free Version</h2>
+                    <p class="price">$0 per month</p>
+                    <ul>
+                        <li>Limited features</li>
+                        <li>Basic support</li>
+                    </ul>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+            
+                <div class="card-1" style="border-color:silver">
+                    <h2>Silver Version</h2>
+                    <p class="price">$5 per month</p>
+                    <ul>
+                        <li>More features</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+            
+                <div class="card-1"style="border-color:gold">
+                    <h2>Golden Version</h2>
+                    <p class="price">$10 per month, Recommended</p>
+                    <ul>
+                        <li>All features unlocked</li>
+                        <li>Premium support</li>
+                        <li>Exclusive access</li>
+                    </ul>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+            </div>
+            
+        </div>
+        
     <script src="Homepage.js">
         
     </script>
