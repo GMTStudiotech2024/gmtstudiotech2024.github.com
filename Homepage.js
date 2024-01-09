@@ -108,3 +108,6 @@ window.addEventListener('load', function () {
         document.body.classList.toggle('dark-mode', savedDarkMode === 'dark');
     }
 });
+document.getElementById("loginLink").addEventListener("click", function() {
+  window.location.href = "LoginSignup.html";
+});
