@@ -8,7 +8,6 @@ body {
     background-color: #f8f9fa;
     color: #333333;
 }
-/*sidebar*/
 .sidebar {
     height: 100vh;
     width: 100px;
@@ -33,7 +32,7 @@ body {
     font-size: 1.8em;
     font-weight: bold;
     display: block;
-    transition: color 0.2s ease; /* Faster transition */
+    transition: color 0.2s ease;
 }
 .logo a:hover {
     color: #007bb5;
@@ -196,7 +195,7 @@ body {
     font-size: 2em;
     color: #0095f6;
     cursor: pointer;
-    transition: color 0.2s ease; /* Faster transition */
+    transition: color 0.2s ease; 
 }
 
 .bx-menu-alt-right.btn-menu:hover {
@@ -311,46 +310,13 @@ body {
     }
 }
 
-/* New styles for Design section */
-#design-section,
-#testing-section,
-#documentation-section {
-    width: calc(33.33% - 20px);
-    margin: 10px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: transform 0.3s ease;
-    position: relative;
-}
 
-/* Additional styles for the dynamic adjustment of content */
-.sidebar.expand ~ .content-container #design-section,
-.sidebar.expand ~ .content-container #testing-section,
-.sidebar.expand ~ .content-container #documentation-section {
-    transform: translateX(0px);
-}
 
-/* Hide words behind the expanded sidebar for new sections */
-.sidebar.expand ~ .content-container #design-section .hidden-words,
-.sidebar.expand ~ .content-container #testing-section .hidden-words,
-.sidebar.expand ~ .content-container #documentation-section .hidden-words {
-    opacity: 0;
-    visibility: hidden;
-}
-button {
-    background-color: #007bb5; /* Button background color in light mode */
-    color: #fff; /* Button text color in light mode */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-}
 
-button:hover {
-    background-color: #005686; /* Hover background color in light mode */
-}
+
+
+
+
 
 .dark-mode button {
     background-color: #333333; /* Button background color in dark mode */
@@ -404,7 +370,6 @@ body {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-
 }
 /* Dark mode styles */
 .dark-mode {
@@ -615,30 +580,11 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    
 }
 
+/* Add your keyframes, media queries, and additional styles below */
 
-.content-box {
-    width: calc(33.33% - 20px);
-    margin: 10px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: transform 0.3s ease;
-    position: relative;
-    height: 200px; /* Set a fixed height */
-    overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
-    border:5px solid black;
-}
-
-/* Dark mode styles for content box */
-.dark-mode .content-box {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* Light text color */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light box shadow for depth */
-}
+/* Dark mode styles and other enhancements can be added as needed */
 
 .sidebar.expand ~ .content-container {
     margin-left: 250px; /* Expanded sidebar adjustment */
@@ -677,153 +623,62 @@ body {
 }
 
 /* Additional dark mode styles can be added as needed */
-.title-lead {
-    text-align: center;
-    margin: 20px 0;
+/* Styling for the marquee text within the content-container in light mode */
+/* Styles for the content container */
+.content-container {
+    display: flex;
+    align-items: center;
 }
 
-.title-lead h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+/* Styles for the icon container */
+.icon-container {
+    margin-right: 20px; /* Adjust margin as needed */
 }
 
-.title-lead p {
-    font-size: 18px;
-    color: #888;
+/* Styles for the marquee container */
+.marquee-container {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Light mode background color */
+    padding: 20px;
+    border: 2px solid #ccc; /* Add border for the marquee box */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    overflow: hidden;
+    white-space: nowrap; /* Prevent lines from breaking inside the marquee */
 }
-/* Your existing CSS styles */
+
+/* Marquee text styles */
+.marquee {
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: marquee-light 25s linear infinite;
+    align-items: center;
+
+}
+
+@keyframes marquee-light {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 /* Dark mode styles */
 .dark-mode .content-container {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: #333333; /* Dark background color */
 }
 
-.dark-mode #about_us {
-    background-color: #333333;
+.dark-mode .marquee-container {
+    background-color: #333333; /* Dark mode background color */
+    border-color: #999999; /* Dark mode border color */
 }
 
-.dark-mode a {
-    color: #9cc2f4;
-}
-
-.dark-mode .card {
-    border: 1px solid #666666;
-    border-radius: 5px;
-}
-
-.dark-mode .example-code {
-    background-color: #000000;
-}
-
-/* Expanding sidebar */
-.sidebar {
-    /* Your existing sidebar styles */
-    transition: width 0.2s ease;
-}
-
-.sidebar.expand {
-    width: 250px;
-}
-
-.content-container {
-    /* Your existing content-container styles */
-    transition: margin-left 0.2s ease;
-}
-
-.sidebar.expand ~ .content-container {
-    margin-left: 250px;
-}
-
-.services {
-    list-style: none;
-    padding: 0;
-    padding-top:10px;
-}
-
-.service {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-top: 10px;
-}
-
-.service img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.service-details h2 {
-    margin: 5px 0;
-}
-
-.service-details p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #666;
-}
-.Service-bt{
-    height:50px;
-    width:100px;
-}
-.pricing-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.card-1 {
-    border: 5px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    width: 250px;
-    border-color:#0095f6;
-
-}
-
-.card-silver {
-    border-color: silver;
-
-}
-
-.card-gold {
-    border-color: gold;
-
-}
-
-.price {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 8px 20px;
-    text-decoration: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-.content-container {
-    padding-top: 0px; /* or margin-top: 10px; */
-    border: 1.5px solid black; /* Add a border as you mentioned */
+.dark-mode .marquee {
+    color: #ffffff; /* Dark mode text color */
 }

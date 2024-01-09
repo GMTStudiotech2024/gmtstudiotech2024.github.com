@@ -22,155 +22,46 @@
 
             <div class="menu">
                 <ul>
-                    <li><lord-icon src="https://cdn.lordicon.com/yrbmguoo.json"trigger="hover"style="width:39px;height:39px"colors="primary:#9cc2f4"></lord-icon><a href="#">Home</a></li>
-                    <li><lord-icon src="https://cdn.lordicon.com/slmechys.json" trigger="hover"style="width:39px;height:39px"colors="primary:#9cc2f4"></lord-icon><a href="#">Source Code</a></li>
-                    <li><lord-icon src="https://cdn.lordicon.com/jnikqyih.json"trigger="hover"style="width:39px;height:39px"colors="primary:#9cc2f4"></lord-icon></i><a href="#">Services</a></li>
-                    <li><lord-icon src="https://cdn.lordicon.com/gjjvytyq.json"trigger="hover"style="width:39px;height:39px"colors="primary:#9cc2f4"></lord-icon><a href="#">Premium Version</a></li>
-                    <li><lord-icon src="https://cdn.lordicon.com/iazmohzf.json"trigger="hover"style="width:39px;height:39px"colors="primary:#9cc2f4"></lord-icon><a href="#">Game</a></li>
+                    <li><lord-icon src="https://cdn.lordicon.com/yrbmguoo.json"trigger="hover"style="width:39px;height:39px"colors="primary:#66a1ee"></lord-icon><a href="#">Home</a></li>
+                    <li><lord-icon src="https://cdn.lordicon.com/slmechys.json" trigger="hover"style="width:39px;height:39px"colors="primary:#66a1ee"></lord-icon><a href="#">Source Code</a></li>
+                    <li><lord-icon src="https://cdn.lordicon.com/jnikqyih.json"trigger="hover"style="width:39px;height:39px"colors="primary:#66a1ee"></lord-icon></i><a href="#">Services</a></li>
+                    <li><lord-icon src="https://cdn.lordicon.com/gjjvytyq.json"trigger="hover"style="width:39px;height:39px"colors="primary:#66a1ee"></lord-icon><a href="#">Premium Version</a></li>
+                    <li><lord-icon src="https://cdn.lordicon.com/iazmohzf.json"trigger="hover"style="width:39px;height:39px"colors="primary:#66a1ee"></lord-icon><a href="#">Game</a></li>
                 </ul>
             </div>
 
             <div class="auth-menu">
                 <ul>
-                    <li onclick="toggleDarkMode()" class="dlb"><lord-icon src="https://cdn.lordicon.com/ipnwkgdy.json"trigger="hover"colors="primary:#9cc2f4"style="width:39px;height:39px"></lord-icon><a href="#">Dark Mode</a></li>
-                    <li><lord-icon src="https://cdn.lordicon.com/qhkvfxpn.json" trigger="in"delay="1500"state="in-trend-up"style="width:39px;height:39px"colors="primary:#9cc2f4"></lord-icon><a href="#">Login</a></li>
-                    <li><lord-icon src="https://cdn.lordicon.com/hrjifpbq.json" trigger="hover"style="width:39px;height:39px"colors="primary:#9cc2f4"></lord-icon><a href="#">Sign Up</a></li>
+                    <li onclick="toggleDarkMode()" class="dlb"><lord-icon src="https://cdn.lordicon.com/ipnwkgdy.json"trigger="hover"colors="primary:#66a1ee"style="width:39px;height:39px"></lord-icon><a href="#">Dark Mode</a></li>
+                    <li><lord-icon src="https://cdn.lordicon.com/qhkvfxpn.json" trigger="in"delay="1"state="in-trend-up"style="width:39px;height:39px"colors="primary:#66a1ee"></lord-icon><a href="#">Login</a></li>
+                    <li><lord-icon src="https://cdn.lordicon.com/hrjifpbq.json" trigger="hover"style="width:39px;height:39px"colors="primary:#66a1ee"></lord-icon><a href="#">Sign Up</a></li>
                 </ul>
             </div>
         </div>
         <!-- End Sidebar -->
         <!-- Content -->
         <div class="content-container">
-            <div class="title-lead">
-                <h1>365code</h1>
-                <p>Home</p>
+            <div class="icon-container">
             </div>
-        </div>    
-        <div class="content-container" style="border-color:black" >
-            <div id="content-container">
-                <h1 href="#">Source code:</h1>
-                <lord-icon src="https://cdn.lordicon.com/xpgofwru.json" trigger="hover" colors="primary:#9cc2f4" style="width:40px;height:40px"></lord-icon>
-                <a class="">Here is the source code of this website or any other code I found interesting</a>
-                <button href="Source-code.html">More Source Code</button>
-                <div class="card">
-                    <p>example:</p>
-                    <div class="example-code">
-                        <pre>
-                            <code id="codeSnippet"> 
-                                // Sidebar functionality
-                                const btn_menu = document.querySelector(".btn-menu");
-                                const side_bar = document.querySelector(".sidebar");
-                                const logoText = document.querySelector(".logo-text");
-                                
-                                // Toggle sidebar expand/collapse
-                                btn_menu.addEventListener("click", function () {
-                                    side_bar.classList.toggle("expand");
-                                    changeBtnIcon();
-                                });
-                                
-                                // Change button icon based on sidebar state
-                                function changeBtnIcon() {
-                                    const isExpanded = side_bar.classList.contains("expand");
-                                
-                                    if (isExpanded) {
-                                        btn_menu.classList.replace("bx-menu", "bx-menu-alt-right");
-                                        logoText.style.display = "inline";
-                                    } else {
-                                        btn_menu.classList.replace("bx-menu-alt-right", "bx-menu");
-                                    }
-                                }
-                            </code>
-                        </pre>
-                    </div>
+            <div class="marquee-container">
+                
+                <div class="marquee-box">
+                    <h1 class="marquee">
+                        <lord-icon src="https://cdn.lordicon.com/jpgpblwn.json"trigger="loop"delay="200"colors="primary:#66d7ee"style="width:40px;height:40px"></lord-icon>
+                        hi there who are you why are you here what date is today?
+                        <lord-icon src="https://cdn.lordicon.com/abvsilxn.json" trigger="loop" delay="500" colors="primary:#66a1ee" style="width:40px;height:40px"></lord-icon>
+                        Hello!! have you noticed this line of words is running? If not, I don't know what to say
+                        <lord-icon src="https://cdn.lordicon.com/rwtswsap.json" trigger="loop" delay="500" colors="primary:#66a1ee" style="width:40px;height:40px"></lord-icon>
+                        Wait, is that a donut?
+                        <lord-icon src="https://cdn.lordicon.com/vxpstcjx.json" trigger="loop" delay="500" style="width:40px;height:40px" colors="primary:#66a1ee"></lord-icon>
+                        No, it is a pizza.
+                        <lord-icon src="https://cdn.lordicon.com/dkhzauae.json" trigger="loop" delay="500" style="width:40px;height:40px" colors="primary:#66a1ee"></lord-icon>
+                        Wow, a strange cat is jumping up and down!!!
+                        <lord-icon src="https://cdn.lordicon.com/abvsilxn.json" trigger="loop" delay="500" colors="primary:#66a1ee" style="width:40px;height:40px"></lord-icon>
+                    </h1>
                 </div>
             </div>
         </div>
-        <div class="content-container">
-            <h1>Services</h1>
-            <ul class="services">
-                <li>
-                    <div class="service">
-                        <img src="/images/icons/webdev.svg" alt="Web Development Icon" />
-                        <div class="service-details">
-                            <h2>Web Development</h2>
-                            <p>HTML5, CSS, Javascript, Python</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="service">
-                        <img src="/images/icons/design.svg" alt="Design & UI/UX Icon" />
-                        <div class="service-details">
-                            <h2>Design &amp; UI/UX</h2>
-                            <p>Figma</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/joseph-miller-8026794/" target="_blank">
-                        <div class="service">
-                            <img src="/images/icons/consulting.svg" alt="Consulting and Mentoring Icon" />
-                            <div class="service-details">
-                                <h2>Consulting and Mentoring</h2>
-                                <p>Github</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <div class="service">
-                        <i class="fa fa-check"></i>
-                        <h2>Web Design & Development</h2>
-                    </div>
-                </li>
-                <li>
-                    <div class="service">
-                        <i class="fa fa-check"></i>
-                        <h2>SEO Optimization</h2>
-                    </div>
-                </li>
-            </ul>
-            <button href="Services.html" class="Service-bt">Services details </button>
-        </div>
-        <div class="content-container">
-            <h1>Get Premium Version</h1>
-            <p>Unlock advanced features with the premium version of our software.</p>
-            <a href="#contact" class="Premium-btn">Contact us for more information<i class="fa fa-arrow-right"></i></a>
-            <div class="pricing-cards">
-                <div class="card-1">
-                    <h2>Free Version</h2>
-                    <p class="price">$0 per month</p>
-                    <ul>
-                        <li>Limited features</li>
-                        <li>Basic support</li>
-                    </ul>
-                    <a href="#" class="btn">Get Started</a>
-                </div>
-            
-                <div class="card-1" style="border-color:silver">
-                    <h2>Silver Version</h2>
-                    <p class="price">$5 per month</p>
-                    <ul>
-                        <li>More features</li>
-                        <li>Priority support</li>
-                    </ul>
-                    <a href="#" class="btn">Get Started</a>
-                </div>
-            
-                <div class="card-1"style="border-color:gold">
-                    <h2>Golden Version</h2>
-                    <p class="price">$10 per month, Recommended</p>
-                    <ul>
-                        <li>All features unlocked</li>
-                        <li>Premium support</li>
-                        <li>Exclusive access</li>
-                    </ul>
-                    <a href="#" class="btn">Get Started</a>
-                </div>
-            </div>
-            
-        </div>
-        
     <script src="Homepage.js">
         
     </script>
