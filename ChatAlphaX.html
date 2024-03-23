@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic AI Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="ChatAlphaX.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-area animate__animated animate__fadeInLeft">
+            <div class="chat-header">
+                <h2>Chat with AlphaX-G1</h2>
+                <div class="chat-status">
+                    <span class="status-indicator online"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Say hi to AlphaX!" autocomplete="off">
+                <button id="sendButton">
+                  <lord-icon
+                  src="https://cdn.lordicon.com/whtfgdfm.json"
+                  trigger="loop"
+                  delay="100"
+                  state="hover-ternd-flat-5"
+                  colors="primary:#fffff
+                  style="width:35px;height:35px">
+              </lord-icon>
+                </button>
+            </div>
+            <div class="chat-info">
+                <p>The most advanced Artificial Idiot designed by GMTstudio, powered by AlphaX</p>
+                <p>According to Benchmark testing of these four models, the accuracy rates are:</p>
+                <ul>
+                    <li><i class="fi fi-rr-user-robot" style="color:lightskyblue"></i>   AlphaX-G1: 0.1%</li>
+                    <li><i class="fi fi-rr-user-robot"style="color:lightskyblue"></i>   AlphaX-G1 Pro: 0.2%</li>
+                    <li><i class="fi fi-rr-user-robot"style="color:lightskyblue"></i>   AlphaX-G1 Advanced: 0.3%</li>
+                    <li><i class="fi fi-rr-user-robot"style="color:lightskyblue"></i>   AlphaX-G1 Ultra: 0.5%</li>
+                </ul>
+                <h3>Current model: <span id="currentModel">AlphaX-G1</span></h3>
+            </div>
+        </div>
+        <div class="settings-area animate__animated animate__fadeInRight">
+            <div class="theme-settings">
+                <h3>Theme</h3>
+                <div class="theme-options">
+                    <button class="theme-btn active" data-theme="light"><i class="fi fi-rr-brightness"></i>Default</button>
+                    <button class="theme-btn" data-theme="dark"><i class="fi fi-rr-book-spells"></i>Dark</button>
+                    <button class="theme-btn" data-theme="neon"><i class="fi fi-rr-lightbulb-on"></i>Neon</button>
+                    <button class="theme-btn" data-theme="sunset"><i class="fi fi-rr-planet-ringed"></i>Sunset</button>
+                    <button class="theme-btn" data-theme="ocean"><i class="fi fi-rr-humidity"></i>Ocean</button>
+                </div>
+            </div>
+            <div class="model-settings">
+                <h3>Model</h3>
+                <div class="model-options">
+                  <button class="model-btn" data-model="alphax-g1"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1</button>
+                  <button class="model-btn" data-model="alphax-g1-pro"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1 Pro</button>
+                  <button class="model-btn" data-model="alphax-g1-advanced"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1 Advanced</button>
+                  <button class="model-btn" data-model="alphax-g1-ultra" style="color:gold"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1 Ultra [best model]</button>
+                </div>
+            </div>
+            <div class="archive-settings">
+                <h3>Archive</h3>
+                <div class="archive-options">
+                    <button id="archiveButton">View Archive</button>
+                </div>
+            </div>
+            <div class="token-usage-settings">
+                <h3>Token Usage</h3>
+                <div class="token-usage-info">
+                    <p>Tokens used for last response: <span id="tokenUsage">0</span></p>
+                </div>
+                <div class="total-token-usage-info">
+                    <p>Total tokens used: <span id="totalTokenUsage">0</span></p>
+                </div>
+            </div>
+            <div class="keyboard-shortcuts">
+                <h3>Keyboard Shortcuts</h3>
+                <ul>
+                    <li><span class="shortcut">Enter</span>: Send message</li>
+                    <li><span class="shortcut">Ctrl + N</span>: New chat</li>
+                    <li><span class="shortcut">Ctrl + S</span>: Save chat</li>
+                    <li><span class="shortcut">Ctrl + L</span>: Load chat</li>
+                </ul>
+              </div>
+          </div>
+          <div class="background-animation"></div>
+        </div>
+    </div>
+    <audio id="backgroundAudio" src="music_fx_lofi_chill_loop_jazz.mp3" loop></audio>
+    </div>
+    <script>
+        
+    </script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+    <script src="ChatAlphaX.js"></script>
+</body>
+</html>
