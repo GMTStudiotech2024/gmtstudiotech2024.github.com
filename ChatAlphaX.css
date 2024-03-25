@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family:"Kanit", sans-serif;
   background-image: url('pic.jpg');
   background-size: cover;
   background-position: center;
@@ -24,6 +26,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   max-width: 600px;
   width: 80%;
+
 }
 
 .settings-area {
@@ -57,7 +60,8 @@ body {
 }
 
 .online {
-  background-color: green;
+  background-color: rgb(5, 195, 5);
+
 }
 
 .chat-messages {
@@ -67,6 +71,8 @@ body {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
+  border-radius:10px;
 }
 
 .chat-message {
@@ -74,9 +80,10 @@ body {
   padding: 10px;
   border-radius: 20px;
   margin-bottom: 10px;
+  background-color: darkslategray;
 }
 
-.user-message {
+.usermMessage {
   align-self: flex-end;
   background-color: #dcf8c6;
   color: #333;
@@ -87,10 +94,10 @@ body {
   background-color: #fff;
   color: #333;
 }
-
-.chat-input {
+.chat-input{
   display: flex;
 }
+
 
 #messageInput {
   flex-grow: 1;
@@ -101,7 +108,7 @@ body {
 
 #sendButton {
   margin-left: 10px;
-  background-color: #4CAF50;
+  background-color: #000;
   color: white;
   border: none;
   border-radius: 5px;
@@ -136,4 +143,10 @@ body {
 .model-btn[data-model="alphax-g1-ultra"]:hover {
   background-color: lightskyblue;
   color: #000;
+}
+.archive-options{
+  display: flex;
+  border-radius: 7.5px;
+  width:100%;
+  height: 100%;
 }

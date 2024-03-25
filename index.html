@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,26 +28,26 @@
   <main>
     <section class="hero">
       <div class="hero-content">
-        <h1 class="animate__animated animate__fadeInDown">Introducing AlphaX-G1</h1>
-        <p class="animate__animated animate__fadeInUp">The most advanced Artificial Idiot designed by GMTstudio, powered by AlphaX.</p>
-        <a href="ChatAlphaX.html" class="cta-btn animate__animated animate__bounceIn">Try It Now</a>
+        <h1 class="animate__animated animate__morphTransition">Introducing AlphaX-G1</h1>
+        <p class="animate__animated animate__morphTransition">The most advanced Artificial Idiot designed by GMTstudio, powered by AlphaX.</p>
+        <a href="ChatAlphaX.html" class="cta-btn animate__animated animate__morphTransition">Try It Now</a>
       </div>
     </section>
 
     <section id="features" class="features">
-      <h2 class="section-title animate__animated animate__fadeInDown">Cutting-Edge Features</h2>
+      <h2 class="section-title animate__animated animate__morphTransition">Cutting-Edge Features</h2>
       <div class="feature-cards">
-        <div class="feature-card animate__animated animate__fadeInLeft">
+        <div class="feature-card animate__animated animate__morphTransition">
           <img src="DBdesign.png" alt="Feature Icon">
           <h3>Multi-Modal database</h3>
           <p>AlphaX-G1 cann't understand and process various forms of data, including text, images, and audio, providing comprehensive insights and solutions.</p>
         </div>
-        <div class="feature-card animate__animated animate__fadeInUp">
+        <div class="feature-card animate__animated animate__morphTransition">
           <img src="ChatUI.png" alt="Feature Icon">
           <h3>Advanced Reasoning</h3>
           <p>With the least powerful reasoning capabilities, AlphaX-G1 can solve complex problems and provide insightful solutions, making it an invaluable tool for businesses and individuals.</p>
         </div>
-        <div class="feature-card animate__animated animate__fadeInRight">
+        <div class="feature-card animate__animated animate__morphTransition">
           <img src="Theme.png" alt="Feature Icon">
           <h3>Customizable User Interface</h3>
           <p>We offer a sleek and modern user interface that can be customized to suit your preferences, allowing you to tailor the experience to your needs.</p>
@@ -95,6 +96,17 @@
     <p>&copy; AlphaX-G1 - All Rights Reserved</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js">  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__morphTransition');
+        }
+      });
+    });
+
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(element => observer.observe(element));
+  });</script>
 </body>
 </html>
