@@ -357,19 +357,19 @@ function toggleButtonColor(model) {
 
   switch (model) {
     case 'alphax-g1':
-      sendButton.style.backgroundColor = '#0077ff'; // Default color
+      sendButton.style.backgroundColor = '#000'; // Default color
       break;
     case 'alphax-g1-pro':
-      sendButton.style.backgroundColor = '#00cc00'; // Green color
+      sendButton.style.backgroundColor = '#000'; // Green color
       break;
     case 'alphax-g1-advanced':
-      sendButton.style.backgroundColor = '#ff9900'; // Orange color
+      sendButton.style.backgroundColor = '#000'; // Orange color
       break;
     case 'alphax-g1-ultra':
-      sendButton.style.backgroundColor = '#ff0000'; // Red color
+      sendButton.style.backgroundColor = '#000'; // Red color
       break;
     default:
-      sendButton.style.backgroundColor = '#0077ff'; // Default color
+      sendButton.style.backgroundColor = '#000'; // Default color
   }
 }
 
