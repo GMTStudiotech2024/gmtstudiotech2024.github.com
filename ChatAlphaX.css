@@ -313,3 +313,17 @@ body {
   font-weight: lighter;
   margin: 5px 0 0;
 }
+#archiveButton {
+  background-color: #176fda;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Orbitron", sans-serif;
+}
+
+#archiveButton:hover {
+  background-color: #0f4a8d;
+}
