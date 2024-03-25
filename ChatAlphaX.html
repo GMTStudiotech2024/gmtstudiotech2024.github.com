@@ -10,7 +10,71 @@
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
-<body>
+<body>  
+    </div>
+    <div class="container">
+        <div class="chat-area animate__animated animate__fadeInLeft">
+            <div class="chat-header">
+                <h2 style="color: #00ff00;">Chat with AlphaX</h2>
+                <div class="chat-status">
+                    <span class="status-indicator online"></span>
+                    <span class="status-text"style="color: #00ff00;">Online</span>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Say hi to AlphaX!" autocomplete="off">
+                <button id="sendButton">
+                    <lord-icon
+                    src="https://cdn.lordicon.com/milpoujo.json"
+                    trigger="loop"
+                    delay="2000"
+                    colors="primary:#ffffff,secondary:#e8e230"
+                    style="width:40px;height:40px">
+                </lord-icon>
+                </button>
+            </div>
+            <div class="chat-info">
+                <h3><span id="currentModel" style="color: #00ff00;">Current Model:AlphaX-G1</span></h3>
+            </div>
+        </div>
+        <div class="settings-area animate__animated animate__fadeInRight">
+            <div class="model-settings">
+                <h3 style="color: #176fda;">Model</h3>
+                <div class="model-options">
+                    <button class="model-btn" data-model="Alphax-G1"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1</button>
+                    <button class="model-btn" data-model="Alphax-G1-Pro"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1 Pro</button>
+                    <button class="model-btn" data-model="Alphax-G1-Advanced"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1 Advanced</button>
+                    <button class="model-btn" data-model="Alphax-G1-Ultra"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1 Ultra [best model]</button>
+                </div>
+            </div>
+            <div class="archive-settings">
+                <h3 style="color: #176fda;">Archive</h3>
+                <div class="archive-options">
+                    <button id="archiveButton" >View Archive</button>
+                </div>
+            </div>
+            <div class="token-usage-settings">
+                <h3 style="color: #176fda;">Token Usage</h3>
+                <div class="token-usage-info">
+                    <p style="color: #00ff00;">Tokens used for last response: <span id="tokenUsage">0</span></p>
+                </div>
+                <div class="total-token-usage-info">
+                    <p style="color: #00ff00;">Total tokens used: <span id="totalTokenUsage">0</span></p>
+                </div>
+            </div>
+            <div class="keyboard-shortcuts">
+                <h3 style="color: #176fda;">Keyboard Shortcuts</h3>
+                <ul>
+                    <li style="color: #00ff00;"><span class="shortcut" style="color: #00ff00;">Enter</span>: Send message</li>
+                    <li style="color: #00ff00;"><span class="shortcut" style="color: #00ff00;">Ctrl + N</span>: New chat</li>
+                    <li style="color: #00ff00;"><span class="shortcut" style="color: #00ff00;">Ctrl + S</span>: Save chat</li>
+                    <li style="color: #00ff00;"><span class="shortcut" style="color: #00ff00;">Ctrl + L</span>: Load chat</li>
+                </ul>
+            </div>
+        </div>
+        <div class="background-animation"></div>
+    </div>
     <div class="card">
         <div class="img"><lord-icon
             src="https://cdn.lordicon.com/ayhtotha.json"
@@ -28,70 +92,6 @@
         </div>
         
     </div>
-        
-    </div>
-    <div class="container">
-        <div class="chat-area animate__animated animate__fadeInLeft">
-            <div class="chat-header">
-                <h2>Chat with AlphaX</h2>
-                <div class="chat-status">
-                    <span class="status-indicator online"></span>
-                    <span class="status-text">Online</span>
-                </div>
-            </div>
-            <div class="chat-messages" id="chatMessages"></div>
-            <div class="chat-input">
-                <input type="text" id="messageInput" placeholder="Say hi to AlphaX!" autocomplete="off">
-                <button id="sendButton">
-                    <lord-icon
-                    src="https://cdn.lordicon.com/milpoujo.json"
-                    trigger="hover"
-                    colors="primary:#ffffff,secondary:#e8e230"
-                    style="width:40px;height:40px">
-                </lord-icon>
-                </button>
-            </div>
-            <div class="chat-info">
-                <h3><span id="currentModel">Current Model:AlphaX-G1</span></h3>
-            </div>
-        </div>
-        <div class="settings-area animate__animated animate__fadeInRight">
-            <div class="model-settings">
-                <h3>Model</h3>
-                <div class="model-options">
-                    <button class="model-btn" data-model="Alphax-G1"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1</button>
-                    <button class="model-btn" data-model="Alphax-G1-Pro"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1 Pro</button>
-                    <button class="model-btn" data-model="Alphax-G1-Advanced"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1 Advanced</button>
-                    <button class="model-btn" data-model="Alphax-G1-Ultra"><i class="fi fi-rr-robot" style="font-size: 1.1rem;"></i> AlphaX-G1 Ultra [best model]</button>
-                </div>
-            </div>
-            <div class="archive-settings">
-                <h3>Archive</h3>
-                <div class="archive-options">
-                    <button id="archiveButton">View Archive</button>
-                </div>
-            </div>
-            <div class="token-usage-settings">
-                <h3>Token Usage</h3>
-                <div class="token-usage-info">
-                    <p>Tokens used for last response: <span id="tokenUsage">0</span></p>
-                </div>
-                <div class="total-token-usage-info">
-                    <p>Total tokens used: <span id="totalTokenUsage">0</span></p>
-                </div>
-            </div>
-            <div class="keyboard-shortcuts">
-                <h3>Keyboard Shortcuts</h3>
-                <ul>
-                    <li><span class="shortcut">Enter</span>: Send message</li>
-                    <li><span class="shortcut">Ctrl + N</span>: New chat</li>
-                    <li><span class="shortcut">Ctrl + S</span>: Save chat</li>
-                    <li><span class="shortcut">Ctrl + L</span>: Load chat</li>
-                </ul>
-            </div>
-        </div>
-        <div class="background-animation"></div>
-    </div>
     <div class="card-2">
         <div class="img"><lord-icon
             src="https://cdn.lordicon.com/eodeknny.json"
@@ -105,7 +105,7 @@
                 <p class="h1">AlphaX</p>
                 <span class="span">2 hour ago</span>
             </div>
-            <p class="p">developing AlphaX-G2, start from April</p>
+            <p class="p">developing AlphaX-G2, lanuch in April</p>
         </div>
     <audio id="backgroundAudio" src="music_fx_lofi_chill_loop_jazz.mp3" loop></audio>
 

@@ -13,6 +13,7 @@ let chatHistory = [];
 // Database for responses
 const responseDatabase = {
     'Alphax-G1': {
+
       what:["I am sorry, this is a difficult task for me to do "],
     who:[
         "I am AlphaX-G1, I am the first Artifical Idiot, you are welcome to ask me anything and i will probably not answer you!"
@@ -253,8 +254,7 @@ function getResponse(message, model) {
     return `${model}: ${getRandomResponse(modelDatabase.who)}`;
   } else if (whatKeywords.some((keyword) => message.includes(keyword))) {
     return `${model}: ${getRandomResponse(modelDatabase.what)}`;
-  }
-  else {
+  }else {
     return `${model}: ${getRandomResponse(modelDatabase.unknown)}`;
   }
 }
@@ -312,7 +312,7 @@ function showLoadingAnimation() {
     loadingIcon.src = 'https://cdn.lordicon.com/jpgpblwn.json';
     loadingIcon.trigger = 'loop';
     loadingIcon.state = 'loop-oscillate';
-    loadingIcon.colors = 'primary:#66a1ee';
+    loadingIcon.colors = 'primary:#00ff00';
     loadingIcon.style.width = '35px';
     loadingIcon.style.height = '35px';
     chatMessages.appendChild(loadingIcon);
@@ -357,19 +357,19 @@ function toggleButtonColor(model) {
 
   switch (model) {
     case 'alphax-g1':
-      sendButton.style.backgroundColor = '#000'; // Default color
+      sendButton.style.backgroundColor = '#000'; 
       break;
     case 'alphax-g1-pro':
-      sendButton.style.backgroundColor = '#000'; // Green color
+      sendButton.style.backgroundColor = '#000'; 
       break;
     case 'alphax-g1-advanced':
-      sendButton.style.backgroundColor = '#000'; // Orange color
+      sendButton.style.backgroundColor = '#000'; 
       break;
     case 'alphax-g1-ultra':
-      sendButton.style.backgroundColor = '#000'; // Red color
+      sendButton.style.backgroundColor = '#000'; 
       break;
     default:
-      sendButton.style.backgroundColor = '#000'; // Default color
+      sendButton.style.backgroundColor = '#000'; 
   }
 }
 
