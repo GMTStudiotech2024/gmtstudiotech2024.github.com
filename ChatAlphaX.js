@@ -13,6 +13,7 @@ let chatHistory = [];
 // Database for responses
 const responseDatabase = {
     'Alphax-G1': {
+      what:["I am sorry, this is a difficult task for me to do "],
     who:[
         "I am AlphaX-G1, I am the first Artifical Idiot, you are welcome to ask me anything and i will probably not answer you!"
     ],
@@ -56,6 +57,7 @@ const responseDatabase = {
       ],
     },
     'Alphax-G1-Pro': {
+      what:["I am sorry, this is a difficult task for me to do, please tell me other things to do."],
         who:[
             "Hi user! I am AlphaX-G1 Pro, I am the Artifical Idiot made by GMTStudio, you are welcome to ask me anything and i will probably not answer you!(:3[___]="
         ],
@@ -99,6 +101,7 @@ const responseDatabase = {
       ],
     },
     'Alphax-G1-Advanced': {
+      what:["I am sorry, this is a difficult task for me to do, by the way you can sleep while you eat your lunch "],
         who:[
             "Hi user! I am AlphaX-G1 Advanced, I am the Artifical Idiot made by GMTStudio, the futuristic Technology company, you are welcome to ask me anything and i will probably not answer you!(σ′▽‵)′▽‵)σ"
         ],
@@ -142,6 +145,7 @@ const responseDatabase = {
       ],
     },
     'Alphax-G1-Ultra': {
+      what:["What do you mean by WHAT? do you think i have the ability to do that huh? i don't even know what you are talking about,But i can tell you the our company will soon lanuch new model, so please wait:)"],
         who:[
             "Hi user! I am AlphaX-G1 Ultra, I am the Artifical Idiot made by GMTStudio, the futuristic Technology company, you are welcome to ask me anything and i will try my best to help you, although my database is limited"
         ],
@@ -223,6 +227,7 @@ function getResponse(message, model) {
     "excellent",
     "brilliant",
   ];
+  const whatKeywords=["what","What","huh"]
   const codeKeywords=["code"];
   const pythonKeywords=["python"];
   const JsKeywords=["javascript","js"]
@@ -246,7 +251,10 @@ function getResponse(message, model) {
     return `${model}: ${getRandomResponse(modelDatabase.javascript)}`;
   } else if (whoareyouKeywords.some((keyword) => message.includes(keyword))) {
     return `${model}: ${getRandomResponse(modelDatabase.who)}`;
-  } else {
+  } else if (whatKeywords.some((keyword) => message.includes(keyword))) {
+    return `${model}: ${getRandomResponse(modelDatabase.what)}`;
+  }
+  else {
     return `${model}: ${getRandomResponse(modelDatabase.unknown)}`;
   }
 }
